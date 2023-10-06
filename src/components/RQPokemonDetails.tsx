@@ -39,7 +39,8 @@ const RQPokemonDetails = () => {
     <>
       <Flex
         direction="column"
-        h="80vh"
+        h='100%'
+        // h="80vh"
         justifyContent="space-evenly"
         align="center"
       >

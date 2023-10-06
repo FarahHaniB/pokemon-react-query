@@ -5,9 +5,8 @@ import HomeBody from './HomeBody'
 
 const HomePage = () => {
   return (
-    <Box p={7}>
+    <Box height='100%'>
       <HomeHeader/>
-      <Divider marginTop={5}/>
       <HomeBody/>
     </Box>
   )

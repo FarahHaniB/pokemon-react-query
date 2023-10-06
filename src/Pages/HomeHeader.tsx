@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Link, Flex, HStack } from "@chakra-ui/react";
+import { Link, Flex, HStack, Box } from "@chakra-ui/react";
 
 const NavLink = ({ path, children }: { path: string; children: ReactNode }) => {
   return (
@@ -11,19 +11,19 @@ const NavLink = ({ path, children }: { path: string; children: ReactNode }) => {
 
 const HomeHeader = () => {
   return (
-    <>
-      <Flex justify="space-between">
+    <Box bg="#007cb9" height='130px'>
+      <Flex justify="space-between" padding={4}>
         <img
           src="https://www.freepnglogos.com/uploads/gotta-catch-em-all-transparent-pokemon-logo-11.png"
           width="200"
           alt="gotta catch em all, transparent pokemon logo"
         />
-        <HStack columnGap="20px">
+        <HStack columnGap="20px" textColor='white'>
           <NavLink path="/">Home</NavLink>
           <NavLink path="/">About</NavLink>
         </HStack>
       </Flex>
-    </>
+    </Box>
   );
 };
 

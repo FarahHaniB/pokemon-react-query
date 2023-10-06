@@ -29,6 +29,12 @@ const RQPokemonImages = ({ pokeIds }: { pokeIds: any }) => {
             <Image
               key={i}
               src={queryResults[i].data?.sprites["front_default"]}
+              minH="130px"
+              width="auto"
+              display="block"
+              marginLeft="auto"
+              marginRight="auto"
+              marginTop={4}
             ></Image>
           );
         })}

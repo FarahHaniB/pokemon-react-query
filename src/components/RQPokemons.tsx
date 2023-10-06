@@ -39,29 +39,37 @@ const RQPokemons = () => {
     // console.log("clicked", clickedPoke);
   };
   return (
-    <Flex flexWrap="wrap" gap="20px" justify="space-evenly">
-      {data?.results.map((poke: any, i: number) => {
-        return (
-          <Box
-            key={poke.name}
-            _hover={{ boxShadow: "dark-lg" }}
-            bg="lightblue"
-            w="100px"
-            h="130px"
-            borderRadius="md"
-            mb="20px"
-            onClick={() => handleClick(poke.name)}
-          >
-            <Link href={`/${poke.name}`}>
-              <Text key={poke.name} align="center">
-                {poke.name}
-              </Text>
-              <RQPokemonImages pokeIds={[i + 1]} />
-            </Link>
-          </Box>
-        );
-      })}
-    </Flex>
+    <Box padding={4}>
+      <Text align="center" fontSize="2xl" fontWeight="bold" margin={6}>
+        Choose your Pokemon!
+      </Text>
+      <Flex flexWrap="wrap" gap="20px" justify="space-evenly">
+        {data?.results.map((poke: any, i: number) => {
+          return (
+            <Box
+              key={poke.name}
+              _hover={{ boxShadow: "dark-lg" }}
+              bg="#feffdf"
+              backgroundImage="linear-gradient(to bottom right, #feffdf, #ffe79a)"
+              w="160px"
+              h="200px"
+              borderRadius="lg"
+              borderWidth="medium"
+              borderColor="#8dc6ff"
+              mb="20px"
+              onClick={() => handleClick(poke.name)}
+            >
+              <Link href={`/${poke.name}`}>
+                <Text key={poke.name} align="center" fontWeight='bold'>
+                  {poke.name}
+                </Text>
+                <RQPokemonImages pokeIds={[i + 1]} />
+              </Link>
+            </Box>
+          );
+        })}
+      </Flex>
+    </Box>
   );
 };
 
