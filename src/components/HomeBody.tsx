@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Box } from "@chakra-ui/react";
-import RQPokemons from "../components/RQPokemons";
-import RQPokemonDetails from "../components/RQPokemonDetails";
+import RQPokemons from "./RQPokemons";
+import RQPokemonDetails from './RQPokemonDetails';
 import { QueryClientProvider, QueryClient } from "react-query";
 
 const queryClient = new QueryClient();
