@@ -11,14 +11,16 @@ const NavLink = ({ path, children }: { path: string; children: ReactNode }) => {
 
 const HomeHeader = () => {
   return (
-    <Box bg="#007cb9" height='130px'>
+    <Box bg="#8594e4" height="130px">
       <Flex justify="space-between" padding={4}>
-        <img
-          src="https://www.freepnglogos.com/uploads/gotta-catch-em-all-transparent-pokemon-logo-11.png"
-          width="200"
-          alt="gotta catch em all, transparent pokemon logo"
-        />
-        <HStack columnGap="20px" textColor='white'>
+        <Link href="/">
+          <img
+            src="https://www.freepnglogos.com/uploads/gotta-catch-em-all-transparent-pokemon-logo-11.png"
+            width="200"
+            alt="gotta catch em all, transparent pokemon logo"
+          />
+        </Link>
+        <HStack columnGap="20px" textColor="white">
           <NavLink path="/">Home</NavLink>
           <NavLink path="/">About</NavLink>
         </HStack>

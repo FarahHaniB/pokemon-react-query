@@ -14,6 +14,7 @@ interface Details {
   data: any;
   abilities: string[];
   types: string[];
+  moves: string[];
 }
 
 const RQPokemonDetails = () => {
@@ -39,7 +40,7 @@ const RQPokemonDetails = () => {
     <>
       <Flex
         direction="column"
-        h='100%'
+        h="100%"
         // h="80vh"
         justifyContent="space-evenly"
         align="center"
@@ -56,45 +57,71 @@ const RQPokemonDetails = () => {
           <Flex align="center" direction="column" mt={4}>
             <RQPokemonImages pokeIds={[pokeId]} />
 
-            <Flex mt={6}>
-              <Text as="b">Abilities: </Text>
-              <Box>
-                {data?.abilities.map((pokeAbility: any) => (
-                  <Text
-                    p="8px"
-                    m="5px"
-                    width="150px"
-                    bg="lightblue"
-                    borderRadius="md"
-                    align="center"
-                    key={pokeAbility.ability.name}
-                  >
-                    {pokeAbility.ability.name}
-                  </Text>
-                ))}
-              </Box>
+            <Flex align="center" mt={10}>
+              <Text as="b" marginBottom={2} marginRight={4}>
+                Abilities:{" "}
+              </Text>
+              {data?.abilities.map((pokeAbility: any) => (
+                <Text
+                  p="8px"
+                  m="5px"
+                  minWidth="150px"
+                  bg="#5e63b6"
+                  color='white'
+                  borderRadius="md"
+                  align="center"
+                  key={pokeAbility.ability.name}
+                >
+                  {pokeAbility.ability.name}
+                </Text>
+              ))}
             </Flex>
-            <Flex mt={6}>
-              <Text as="b">Types: </Text>
-              <Box>
-                {data?.types.map((pokeType: any) => (
+            <Flex align="center" mt={10}>
+              <Text as="b" marginBottom={2} marginRight={4}>
+                Types:{" "}
+              </Text>
+              {data?.types.map((pokeType: any) => (
+                <Text
+                  p="8px"
+                  m="5px"
+                  minWidth="150px"
+                  bg="#a393eb"
+                  borderRadius="md"
+                  align="center"
+                  key={pokeType.type.name}
+                >
+                  {pokeType.type.name}
+                </Text>
+              ))}
+            </Flex>
+
+            <Flex align="center" mt={10} direction="column">
+              <Text as="b" marginBottom={2}>
+                Moves:{" "}
+              </Text>
+              <Flex flexWrap="wrap" justifyContent="center">
+                {data?.moves.map((pokeMove: any) => (
                   <Text
                     p="8px"
                     m="5px"
-                    width="150px"
-                    bg="burlywood"
+                    minWidth="150px"
+                    bg="#ffebbb"
                     borderRadius="md"
                     align="center"
-                    key={pokeType.type.name}
+                    key={pokeMove.move.name}
                   >
-                    {pokeType.type.name}
+                    {pokeMove.move.name}
                   </Text>
                 ))}
-              </Box>{" "}
+              </Flex>{" "}
             </Flex>
           </Flex>
         </Box>
-        <Button onClick={() => navigate(-1)}>Back</Button>
+        <Box marginY={10}>
+          <Button onClick={() => navigate(-1)} color="black">
+            Back
+          </Button>
+        </Box>
       </Flex>
     </>
   );

@@ -2,12 +2,14 @@ import React from 'react'
 import HomeHeader from './HomeHeader'
 import { Box, Divider } from '@chakra-ui/react'
 import HomeBody from './HomeBody'
+import HomeFooter from './HomeFooter'
 
 const HomePage = () => {
   return (
-    <Box height='100%'>
+    <Box>
       <HomeHeader/>
       <HomeBody/>
+      <HomeFooter/>
     </Box>
   )
 }

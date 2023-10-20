@@ -9,7 +9,7 @@ const queryClient = new QueryClient();
 
 const HomeBody = () => {
   return (
-    <Box padding='15px' bg='#e4f1fe'>
+    <Box padding='15px' bg='#d5def5'>
       <QueryClientProvider client={queryClient} />
       <Router>
         <Routes>
