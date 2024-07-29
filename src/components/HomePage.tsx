@@ -6,7 +6,7 @@ import HomeFooter from './HomeFooter'
 
 const HomePage = () => {
   return (
-    <Box>
+    <Box w="full" h="full">
       <HomeHeader/>
       <HomeBody/>
       <HomeFooter/>

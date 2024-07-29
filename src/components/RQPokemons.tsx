@@ -60,10 +60,10 @@ const RQPokemons = () => {
               onClick={() => handleClick(poke.name)}
             >
               <Link href={`/${poke.name}`}>
-                <Text key={poke.name} align="center" fontWeight='bold'>
+                <RQPokemonImages pokeIds={[i + 1]} />
+                <Text key={poke.name} align="center" fontWeight="bold">
                   {poke.name}
                 </Text>
-                <RQPokemonImages pokeIds={[i + 1]} />
               </Link>
             </Box>
           );
